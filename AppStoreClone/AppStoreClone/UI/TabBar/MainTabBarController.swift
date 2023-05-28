@@ -15,19 +15,38 @@ final class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         setupTabBar()
-        viewControllers = [
-            homeViewController(),
-            gameViewController(),
-            appViewController(),
-            arcadeViewController(),
-            searchViewController()
-        ]
+        viewControllers = tabViewControllers()
     }
 
     private func setupTabBar() {
-//        tabBar.backgroundColor = .designSystem(.BackgroundColorSecondary)
-//        tabBar.tintColor = .designSystem(.AccentColor)
-//        tabBar.unselectedItemTintColor = .designSystem(.TextColorSecondary)
+        insertTopBorderViewAtTabBar()
+        insertBlurViewAtTabBar()
+    }
+
+    private func insertTopBorderViewAtTabBar() {
+        let topBorder: CALayer = CALayer()
+        topBorder.frame = CGRect(x: 0, y: 0, width: tabBar.frame.size.width, height: 0.2) // height 최소값이 0.2??
+        topBorder.backgroundColor = UIColor.black.cgColor
+
+        tabBar.layer.addSublayer(topBorder)
+    }
+
+    private func insertBlurViewAtTabBar() {
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+
+        blurView.frame = tabBar.bounds
+        blurView.autoresizingMask = [.flexibleHeight]
+
+        tabBar.insertSubview(blurView, at: 0)
+    }
+
+    private func tabViewControllers() -> [UIViewController] {
+        [homeViewController(),
+         gameViewController(),
+         appViewController(),
+         arcadeViewController(),
+         searchViewController()]
     }
 }
 
