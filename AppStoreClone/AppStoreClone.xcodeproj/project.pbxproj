@@ -21,6 +21,8 @@
 		8ED9E58D2A22E90F0059BCD3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E58C2A22E90F0059BCD3 /* GameViewController.swift */; };
 		8ED9E58F2A22E9250059BCD3 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E58E2A22E9250059BCD3 /* AppViewController.swift */; };
 		8ED9E5912A22E9370059BCD3 /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E5902A22E9370059BCD3 /* ArcadeViewController.swift */; };
+		8ED9E5942A22EC8D0059BCD3 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E5932A22EC8D0059BCD3 /* UIColor+.swift */; };
+		8ED9E5962A2301AD0059BCD3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E5952A2301AD0059BCD3 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		8ED9E58C2A22E90F0059BCD3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8ED9E58E2A22E9250059BCD3 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		8ED9E5902A22E9370059BCD3 /* ArcadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
+		8ED9E5932A22EC8D0059BCD3 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		8ED9E5952A2301AD0059BCD3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */,
+				8ED9E5952A2301AD0059BCD3 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -194,8 +199,17 @@
 				8ED9E5862A22E8B40059BCD3 /* App */,
 				8ED9E5872A22E8BB0059BCD3 /* Arcade */,
 				8ED9E5882A22E8C10059BCD3 /* Search */,
+				8ED9E5922A22EC7B0059BCD3 /* Common */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		8ED9E5922A22EC7B0059BCD3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8ED9E5932A22EC8D0059BCD3 /* UIColor+.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED9E5962A2301AD0059BCD3 /* SearchViewModel.swift in Sources */,
 				8ED9E5822A22E6A10059BCD3 /* SearchViewController.swift in Sources */,
 				8E876E5D2A1CFA95005ED773 /* APIManager.swift in Sources */,
 				8ED9E5912A22E9370059BCD3 /* ArcadeViewController.swift in Sources */,
@@ -337,6 +352,7 @@
 				8ED9E58F2A22E9250059BCD3 /* AppViewController.swift in Sources */,
 				8ED9E58B2A22E8FB0059BCD3 /* HomeViewController.swift in Sources */,
 				8E876E2F2A1CF87D005ED773 /* SceneDelegate.swift in Sources */,
+				8ED9E5942A22EC8D0059BCD3 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
