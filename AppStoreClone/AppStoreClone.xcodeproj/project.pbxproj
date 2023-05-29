@@ -16,6 +16,12 @@
 		8E876E502A1CF880005ED773 /* AppStoreCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E876E4F2A1CF880005ED773 /* AppStoreCloneUITestsLaunchTests.swift */; };
 		8E876E5D2A1CFA95005ED773 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E876E5C2A1CFA95005ED773 /* APIManager.swift */; };
 		8E876E5F2A1CFD9A005ED773 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E876E5E2A1CFD9A005ED773 /* MainTabBarController.swift */; };
+		8E9487972A2447260073AD88 /* NewDiscoveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9487962A2447260073AD88 /* NewDiscoveryCell.swift */; };
+		8E9487992A24473E0073AD88 /* RecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9487982A24473E0073AD88 /* RecommendItemCell.swift */; };
+		8E94879B2A2493120073AD88 /* SearchSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94879A2A2493120073AD88 /* SearchSectionHeaderView.swift */; };
+		8E94879E2A249A3B0073AD88 /* SearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94879D2A249A3B0073AD88 /* SearchSection.swift */; };
+		8E9487A02A249A4B0073AD88 /* SearchNewDiscoveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94879F2A249A4B0073AD88 /* SearchNewDiscoveryModel.swift */; };
+		8E9487A22A249A5C0073AD88 /* SearchRecommenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9487A12A249A5C0073AD88 /* SearchRecommenModel.swift */; };
 		8ED9E5822A22E6A10059BCD3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */; };
 		8ED9E58B2A22E8FB0059BCD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E58A2A22E8FB0059BCD3 /* HomeViewController.swift */; };
 		8ED9E58D2A22E90F0059BCD3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E58C2A22E90F0059BCD3 /* GameViewController.swift */; };
@@ -56,6 +62,12 @@
 		8E876E4F2A1CF880005ED773 /* AppStoreCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E876E5C2A1CFA95005ED773 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		8E876E5E2A1CFD9A005ED773 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8E9487962A2447260073AD88 /* NewDiscoveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDiscoveryCell.swift; sourceTree = "<group>"; };
+		8E9487982A24473E0073AD88 /* RecommendItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendItemCell.swift; sourceTree = "<group>"; };
+		8E94879A2A2493120073AD88 /* SearchSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionHeaderView.swift; sourceTree = "<group>"; };
+		8E94879D2A249A3B0073AD88 /* SearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSection.swift; sourceTree = "<group>"; };
+		8E94879F2A249A4B0073AD88 /* SearchNewDiscoveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewDiscoveryModel.swift; sourceTree = "<group>"; };
+		8E9487A12A249A5C0073AD88 /* SearchRecommenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecommenModel.swift; sourceTree = "<group>"; };
 		8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8ED9E58A2A22E8FB0059BCD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8ED9E58C2A22E90F0059BCD3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +153,26 @@
 			path = AppStoreCloneUITests;
 			sourceTree = "<group>";
 		};
+		8E94879C2A249A270073AD88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E94879D2A249A3B0073AD88 /* SearchSection.swift */,
+				8E94879F2A249A4B0073AD88 /* SearchNewDiscoveryModel.swift */,
+				8E9487A12A249A5C0073AD88 /* SearchRecommenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9487A32A249AD10073AD88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E94879A2A2493120073AD88 /* SearchSectionHeaderView.swift */,
+				8E9487962A2447260073AD88 /* NewDiscoveryCell.swift */,
+				8E9487982A24473E0073AD88 /* RecommendItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8ED9E5832A22E89E0059BCD3 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +218,8 @@
 			children = (
 				8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */,
 				8ED9E5952A2301AD0059BCD3 /* SearchViewModel.swift */,
+				8E9487A32A249AD10073AD88 /* View */,
+				8E94879C2A249A270073AD88 /* Model */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -343,12 +377,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED9E5962A2301AD0059BCD3 /* SearchViewModel.swift in Sources */,
+				8E94879B2A2493120073AD88 /* SearchSectionHeaderView.swift in Sources */,
 				8ED9E5822A22E6A10059BCD3 /* SearchViewController.swift in Sources */,
 				8E876E5D2A1CFA95005ED773 /* APIManager.swift in Sources */,
 				8ED9E5912A22E9370059BCD3 /* ArcadeViewController.swift in Sources */,
+				8E9487A02A249A4B0073AD88 /* SearchNewDiscoveryModel.swift in Sources */,
 				8E876E5F2A1CFD9A005ED773 /* MainTabBarController.swift in Sources */,
+				8E9487992A24473E0073AD88 /* RecommendItemCell.swift in Sources */,
+				8E9487A22A249A5C0073AD88 /* SearchRecommenModel.swift in Sources */,
 				8ED9E58D2A22E90F0059BCD3 /* GameViewController.swift in Sources */,
+				8E94879E2A249A3B0073AD88 /* SearchSection.swift in Sources */,
 				8E876E2D2A1CF87D005ED773 /* AppDelegate.swift in Sources */,
+				8E9487972A2447260073AD88 /* NewDiscoveryCell.swift in Sources */,
 				8ED9E58F2A22E9250059BCD3 /* AppViewController.swift in Sources */,
 				8ED9E58B2A22E8FB0059BCD3 /* HomeViewController.swift in Sources */,
 				8E876E2F2A1CF87D005ED773 /* SceneDelegate.swift in Sources */,

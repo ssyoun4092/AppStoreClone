@@ -26,13 +26,13 @@ final class MainTabBarController: UITabBarController {
     private func insertTopBorderViewAtTabBar() {
         let topBorder: CALayer = CALayer()
         topBorder.frame = CGRect(x: 0, y: 0, width: tabBar.frame.size.width, height: 0.2) // height 최소값이 0.2??
-        topBorder.backgroundColor = UIColor.black.cgColor
+        topBorder.backgroundColor = UIColor.gray.cgColor
 
         tabBar.layer.addSublayer(topBorder)
     }
 
     private func insertBlurViewAtTabBar() {
-        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
 
         blurView.frame = tabBar.bounds
