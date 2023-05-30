@@ -16,6 +16,7 @@ final class SearchViewController: UIViewController {
     private var cancellables: Set<AnyCancellable> = .init()
     private lazy var dataSource: DataSource = createDataSource()
     private let apiManager = APIManager()
+    private let viewModel = SearchViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,16 @@ final class SearchViewController: UIViewController {
         setNavigationBar()
         setUI()
         applySnapshot()
+
+        publish()
+    }
+
+    private func publish() {
+        viewModel.$searchResult
+            .receive(on: RunLoop.main)
+            .sink { searchResults in
+                print(searchResults)
+            }.store(in: &cancellables)
     }
 
     private lazy var searchController: UISearchController = {
@@ -34,7 +45,7 @@ final class SearchViewController: UIViewController {
 //        searchController.delegate = self
         searchController.searchBar.delegate = self
         /// 뒷배경이 흐려지지 않도록 설정
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
 
         return searchController
     }()
@@ -73,7 +84,6 @@ final class SearchViewController: UIViewController {
 
                 return section
             case .recommendItem:
-
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
@@ -101,24 +111,17 @@ final class SearchViewController: UIViewController {
 
             switch searchSection {
             case .newDiscovery:
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewDiscoveryCell", for: indexPath) as? NewDiscoveryCell else {
-                    return UICollectionViewCell()
-                }
-                // cell.configure(with: item.newDis)
-                guard let newDiscoveryItem = item as? SearchNewDiscoveryModel else {
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewDiscoveryCell", for: indexPath) as? NewDiscoveryCell,
+                      let newDiscoveryItem = item as? SearchNewDiscoveryModel else {
                     return UICollectionViewCell()
                 }
 
                 cell.configure(with: newDiscoveryItem)
 
                 return cell
-
             case .recommendItem:
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendItemCell", for: indexPath) as? RecommendItemCell else {
-                    return UICollectionViewCell()
-                }
-
-                guard let recommendItem = item as? SearchRecommendModel else {
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendItemCell", for: indexPath) as? RecommendItemCell,
+                      let recommendItem = item as? SearchRecommendModel else {
                     return UICollectionViewCell()
                 }
 
@@ -182,16 +185,6 @@ extension SearchViewController: UISearchBarDelegate {
             return
         }
 
-        apiManager.getAppStore(text)
-            .sink { complete in
-                switch complete {
-                case .finished:
-                    return
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            } receiveValue: { data in
-                print("data: \(data)")
-            }.store(in: &cancellables)
+        viewModel.searchText(with: text)
     }
 }

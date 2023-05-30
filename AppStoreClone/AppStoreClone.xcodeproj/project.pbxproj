@@ -22,6 +22,8 @@
 		8E94879E2A249A3B0073AD88 /* SearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94879D2A249A3B0073AD88 /* SearchSection.swift */; };
 		8E9487A02A249A4B0073AD88 /* SearchNewDiscoveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94879F2A249A4B0073AD88 /* SearchNewDiscoveryModel.swift */; };
 		8E9487A22A249A5C0073AD88 /* SearchRecommenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9487A12A249A5C0073AD88 /* SearchRecommenModel.swift */; };
+		8EC4277B2A24D6420035A449 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4277A2A24D6420035A449 /* SearchResponse.swift */; };
+		8EC4277D2A24E70E0035A449 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4277C2A24E70E0035A449 /* SearchResultViewController.swift */; };
 		8ED9E5822A22E6A10059BCD3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */; };
 		8ED9E58B2A22E8FB0059BCD3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E58A2A22E8FB0059BCD3 /* HomeViewController.swift */; };
 		8ED9E58D2A22E90F0059BCD3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9E58C2A22E90F0059BCD3 /* GameViewController.swift */; };
@@ -68,6 +70,8 @@
 		8E94879D2A249A3B0073AD88 /* SearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSection.swift; sourceTree = "<group>"; };
 		8E94879F2A249A4B0073AD88 /* SearchNewDiscoveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewDiscoveryModel.swift; sourceTree = "<group>"; };
 		8E9487A12A249A5C0073AD88 /* SearchRecommenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecommenModel.swift; sourceTree = "<group>"; };
+		8EC4277A2A24D6420035A449 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		8EC4277C2A24E70E0035A449 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8ED9E58A2A22E8FB0059BCD3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8ED9E58C2A22E90F0059BCD3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				8E94879D2A249A3B0073AD88 /* SearchSection.swift */,
 				8E94879F2A249A4B0073AD88 /* SearchNewDiscoveryModel.swift */,
 				8E9487A12A249A5C0073AD88 /* SearchRecommenModel.swift */,
+				8EC4277A2A24D6420035A449 /* SearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED9E5812A22E6A10059BCD3 /* SearchViewController.swift */,
+				8EC4277C2A24E70E0035A449 /* SearchResultViewController.swift */,
 				8ED9E5952A2301AD0059BCD3 /* SearchViewModel.swift */,
 				8E9487A32A249AD10073AD88 /* View */,
 				8E94879C2A249A270073AD88 /* Model */,
@@ -384,6 +390,7 @@
 				8E9487A02A249A4B0073AD88 /* SearchNewDiscoveryModel.swift in Sources */,
 				8E876E5F2A1CFD9A005ED773 /* MainTabBarController.swift in Sources */,
 				8E9487992A24473E0073AD88 /* RecommendItemCell.swift in Sources */,
+				8EC4277B2A24D6420035A449 /* SearchResponse.swift in Sources */,
 				8E9487A22A249A5C0073AD88 /* SearchRecommenModel.swift in Sources */,
 				8ED9E58D2A22E90F0059BCD3 /* GameViewController.swift in Sources */,
 				8E94879E2A249A3B0073AD88 /* SearchSection.swift in Sources */,
@@ -392,6 +399,7 @@
 				8ED9E58F2A22E9250059BCD3 /* AppViewController.swift in Sources */,
 				8ED9E58B2A22E8FB0059BCD3 /* HomeViewController.swift in Sources */,
 				8E876E2F2A1CF87D005ED773 /* SceneDelegate.swift in Sources */,
+				8EC4277D2A24E70E0035A449 /* SearchResultViewController.swift in Sources */,
 				8ED9E5942A22EC8D0059BCD3 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

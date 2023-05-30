@@ -10,16 +10,11 @@ import Foundation
 import Combine
 
 final class APIManager {
-    func getAppStore(_ search: String) {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=\(search)&country=kr&entity=software") else {
-            return
-        }
-//        URLSession.shared.dataTaskPublisher(for: url)
-//            .sink { error in
-//                print(error)
-//            } receiveValue: { data, response in
-//                let decodedData = JSONDecoder().decode(<#T##type: Decodable.Protocol##Decodable.Protocol#>, from: data)
-//            }
+    func getAppStore(_ search: String) -> AnyPublisher<Data, Error> {
+        let url = URL(string: "https://itunes.apple.com/search?term=\(search)&country=kr&entity=software")!
 
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .tryMap { $0.data }
+            .eraseToAnyPublisher()
     }
 }
